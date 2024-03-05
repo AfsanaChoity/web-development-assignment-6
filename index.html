@@ -31,7 +31,9 @@
             font-optical-sizing: auto;
             font-style: normal;
 
+
         }
+        
     </style>
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/3973ab62ca.js" crossorigin="anonymous"></script>
@@ -39,8 +41,52 @@
 
 <body>
     <!-- this is header -->
-    <header>
-
+    <header class="mx-20 mt-10">
+        <!-- This is navbar -->
+        <nav>
+            <div class="navbar bg-base-100 grid grid-cols-1 lg:flex">
+                <div class=" lg:flex-1">
+                  <a class="btn btn-ghost text-4xl mulish-font text-4xl font-extrabold">Friends Zone</a>
+                </div>
+                <div class="lg:flex-none">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><div class="tooltip" data-tip="Home">
+                        <button class="btn rounded-full border-1 border-gray-400"><i class="fa-solid fa-house"></i></button>
+                      </div></li>
+                      <li><div class="tooltip" data-tip="Edit">
+                        <button class="btn rounded-full border-1 border-gray-400"><i class="fa-regular fa-pen-to-square"></i></button>
+                      </div></li>
+                      <li><div class="tooltip" data-tip="Add">
+                        <button class="btn rounded-full border-1 border-gray-400"><i class="fa-solid fa-user-plus"></i></button>
+                      </div></li>
+                      <li><div class="tooltip" data-tip="Flag">
+                        <button class="btn rounded-full border-1 border-gray-400"><i class="fa-regular fa-flag"></i></button>
+                      </div></li>
+                      
+                      
+                    
+                    <li>
+                      
+                        <button class="btn btn-primary rounded-full lg:px-10 text-xl font-bold mulish-font text-white">Sign In</button>
+                      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        </nav>
+        <!-- This is banner -->
+            <div class="hero min-h-screen bg-[#12132D] " style="background-image: url(./images/bgbanner.png); border-radius: 2xl;">
+                <div class="hero-overlay "></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <button class="btn btn-primary">Get Started</button>
+                  </div>
+                </div>
+                
+              </div>
+        
     </header>
 
 
@@ -63,7 +109,7 @@
     <!-- section three : Latest Posts -->
     <section class="m-20">
         <h3 class="mulish-font text-center text-4xl font-extrabold">Latest Posts</h3>
-        <p class="text-gray-500 font-normal text-xl mulish-font text-center my-10">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
+        <p class="text-gray-500 font-normal text-xl mulish-font text-center my-10 lg:mx-52">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
 
         <div id="latestPost" class="grid grid-cols-1 lg:grid-cols-3 gap-5">
             
@@ -75,9 +121,9 @@
     <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
         <aside>
             <h2 class="mulish-font text-[#12132D] text-4xl font-extrabold mb-5">Friends Zone</h2>
-            <p class="text-gray-500 font-normal text-xl mulish-font">
+            <p class="text-gray-500 font-normal text-xl mulish-font lg:mx-52">
                 Friends Zone website offers a vibrant platform where meaningful connections thrive,
-                <br>
+                
                 fostering friendships that transcend boundaries.
 
             </p>
