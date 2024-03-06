@@ -62,15 +62,16 @@ const allPost = async (searchText) => {
 
 }
 allPost("");
-
+let btn = [];
 
 const displayAllPost = posts => {
     // console.log(posts);
-
+    let readCount = 0;
     const postContainer = document.getElementById("post-container");
+    const titleContainer = document.getElementById("post-container");
     postContainer.textContent= '';
     posts.forEach(post => {
-        console.log(post);
+        // console.log(post);
 
         const postCard = document.createElement('div');
         postCard.classList = `card  bg-base-100 bg-gray-200  mb-5 h-60 lg:56 `;
@@ -102,7 +103,7 @@ const displayAllPost = posts => {
         <p>${post.
                 posted_time} min</p>
         <div class="card-actions justify-end ">
-          <button class="btn btn-primary bg-[#10B981] border-none rounded-full"><i class="fa-solid fa-envelope-open"></i></button>
+          <button id="" class="btn btn-primary bg-[#10B981] border-none rounded-full email-btn"><i class="fa-solid fa-envelope-open"></i></button>
         </div>
       </div>
       
@@ -120,16 +121,41 @@ const displayAllPost = posts => {
             notActive.style.backgroundColor = "red";
         }
             postContainer.appendChild(postCard);
+
+            const emailBtn = postCard.querySelector(".email-btn");
+        emailBtn.addEventListener("click", function (e) {
+            readCount++;
+            // console.log(readCount);
+            const read = document.getElementById("read-count");
+            // console.log(read);
+            document.getElementById("read-count").innerText = readCount;
+
+
     });
-
-
+    });
+    
 }
 
 const handleSearch = () => {
     const searchField = document.getElementById('search-btn').value;
     
     
-    console.log(searchField);
+    // console.log(searchField);
     allPost(searchField);
 };
 
+// const markAsRead = () => {
+     
+    
+//     let readCount = 0;
+//     btn.addEventListener("click", function (e){
+//         // console.log("click korchi")
+//         readCount++;
+//         document.getElementById("read-count").innerText = readCount;
+
+//     })
+    
+    
+// }
+
+// markAsRead();
